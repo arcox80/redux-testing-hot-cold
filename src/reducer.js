@@ -57,11 +57,10 @@ export default (state, action) => {
         return state;
     }
     else if (action.type === TOGGLE_INFO_MODAL) {
-         state = Object.assign({}, state, {
-             showInfoModal: !state.showInfoModal
+        state = Object.assign({}, state, {
+            showInfoModal: !state.showInfoModal
         });
         return state;
     }
     return state;
 };
-
