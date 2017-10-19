@@ -20,7 +20,7 @@ describe('Reducer', () => {
   describe('newGame', () => {
     it('Should start a new game', () => {
       let state = {
-        guesses: [23, 24, 25],
+        guesses: [23, 24, 125],
         feedback: 'You got it!',
         correctAnswer: 125,
         showInfoModal: true
