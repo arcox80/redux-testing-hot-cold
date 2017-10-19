@@ -1,6 +1,5 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-
 import Game from './game.js'
 import Header from './header';
 import GuessSection from './guess-section';

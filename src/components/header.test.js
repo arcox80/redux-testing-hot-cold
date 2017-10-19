@@ -1,13 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-
 import {Header} from './header.js';
 import TopNav from './top-nav';
 import InfoModal from './info-modal';
 
 describe('<Header />', () => {
   it('Renders without crashing', () => {
-      shallow(<Header />);
+    shallow(<Header />);
   });
   
   it('Renders TopNav initially', () => {

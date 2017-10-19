@@ -24,7 +24,7 @@ describe('Reducer', () => {
         feedback: 'You got it!',
         correctAnswer: 125,
         showInfoModal: true
-      }
+      };
       state = reducer(state, newGame());
       expect(state.guesses).toEqual([]);
       expect(state.feedback).toEqual('Make your guess!');

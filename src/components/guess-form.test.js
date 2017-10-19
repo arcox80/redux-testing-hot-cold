@@ -1,12 +1,11 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
-
 import {GuessForm} from './guess-form.js';
 import {makeGuess} from '../actions.js';
 
 describe('<GuessForm />', () => {
   it('Renders without crashing', () => {
-      shallow(<GuessForm />);
+    shallow(<GuessForm />);
   });
 
   it('Should fire the onGuess dispatch when form is submitted', () => {
@@ -19,10 +18,10 @@ describe('<GuessForm />', () => {
   });
 
   it('Should reset the input when the form is submitted', () => {
-      const wrapper = mount(<GuessForm dispatch={() => {}}/>);
-      const input = wrapper.find('input[type="text"]');
-      input.node.value = 10;
-      wrapper.simulate('submit');
-      expect(input.node.value).toEqual('');
+    const wrapper = mount(<GuessForm dispatch={() => {}}/>);
+    const input = wrapper.find('input[type="text"]');
+    input.node.value = 10;
+    wrapper.simulate('submit');
+    expect(input.node.value).toEqual('');
   });
 });
