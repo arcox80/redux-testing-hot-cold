@@ -12,8 +12,12 @@ describe('<GuessForm />', () => {
     const dispatch = jest.fn();
     const wrapper = mount(<GuessForm dispatch={dispatch} />);
     const value = '25';
-    wrapper.find('input[type="text"]').node.value = value;
-    wrapper.simulate('submit');
+    wrapper.find('input[type="text"]').get(0).ref().value = 25;
+    //wrapper.find('#userGuess').simulate('change', {target: {value: '25'}})
+    console.log(wrapper.find('input[type="text"]').get(0).value);
+    //wrapper.find('input[type="text"]').refs.input.value = value;
+    //wrapper.find('input[type="text"]').simulate('change', {target: {value: 25}});
+    wrapper.find('#guessButton').simulate('submit');
     expect(dispatch).toHaveBeenCalledWith(makeGuess(value));
   });
 
