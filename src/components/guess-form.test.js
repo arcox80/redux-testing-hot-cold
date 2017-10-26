@@ -22,7 +22,6 @@ describe('<GuessForm />', () => {
     const input = wrapper.find('input[type="text"]');
     input.instance().value = 10;
     wrapper.simulate('submit');
-    console.log(input.instance());
     expect(input.instance().value).toEqual('');
   });
 });
